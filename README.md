@@ -83,4 +83,38 @@ Pasar los test de validación de errores en la entrada de datos (Throws error)
      ✓ Throws error when the total sum of inputs (15+15+20) is not less than 40: fn(15, 15, 20)
 ```
 
- 
+## Abordando el enunciado
+Primero leeremos varias veces el enunciado para buscar y entender qué nos piden, es el momento de ensuciar el enunciado:
+
+
+Ayúdales <mark>haciendo una función que lo calcule lo más rápido posible:</mark> hay decenas de estudiantes hambrientos que dependen de ti.
+
+Las empanadas que han elegido los profesores tienen 3, 4 o 5 ingredientes. La masa de una empanada vale 6 euros, y cada ingrediente adicional vale 2 euros. Así, las <mark>empanadas pueden valer 12, 14 o 16 euros. Se garantiza que el número total de empanadas será múltiplo de 3.</mark> --> (%3 === 0)
+
+Entrada
+
+<mark>La función debe tener tres parámetros de entrada. Cada conjunto de entrada consta de tres enteros, a b c,</mark> que son el número de empanadas de 3, 4 y 5 ingredientes, respectivamente. <mark>Se garantiza que el número de empanadas, a + b + c, cumple que a + b + c < 40. Además, el número de empanadas es divisible entre 3.</mark>
+
+Salida
+
+<mark>Por cada conjunto de entrada, retornar un único entero: la mínima cantidad de euros que se puede pagar para llevarse todas las empanadas.</mark>
+
+### ¿Qué nos dan?
+Nos proporcionarán 3 argumentos, que serán los valores REALES de las CANTIDADES.
+Es importante diferenciar entre <b>cantidades de empanadas</b> y <b>precios de empanadas</b>, sin olvidarnos de ambos, ya que los relacionaremos.
+
+### ¡¡Empecemos!!
+Primero tendremos que validar los 3 argumentos, este caso: que el sumatorio de las cantidades sea menor que 40, que el total de empanadas sea divisible entre 3 y que las cantidades de empanadas sean números enteros (no se puede pedir -1 empanada, se la tendríamos que dar nosotros al vendedor).
+
+### Vamos a lo divertido
+Una vez validados los 3 argumentos, tenemos que crear una fórmula para encontrar la solución al problema principal.<br>
+Teniendo en cuenta que:<br>
+` a, b y c` son los valores que nos proporcionan, es decir, las cantidades de empanadas, y que ` precioA, precioB y precioC` son los precios de los tipos de empanas, es decir, 3 tipos de empanadas. AHÍ está el truco. <br>
+Por lo tanto, la formula se quedaría de la siguiente forma:<br>
+` ((a*precioA)+(b*precioB)+(c*precioC)/3)`  lo que dará un número que se corresponde a la salida. SIN EMBARGO, habrá que redondear a la alza el número.
+
+## Solucionando el enunciado
+Como describir con palabras cómo he llegado a mi conclusión es algo complejo, dejo imágenes de cómo llegué a dicha solución primero con boligrafo y papel.
+
+[Imagen 1](https://ibb.co/tXSRTwp)<br>
+[Imagen 2](https://ibb.co/9N1z1Rr)
